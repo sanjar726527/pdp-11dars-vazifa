@@ -1,0 +1,202 @@
+.customLastWeekTop {
+  &__main-card {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    position: relative;
+  }
+  .slide-title {
+    a {
+      color: #fff;
+      background: linear-gradient(to right, currentColor 0%, currentColor 100%);
+      background-size: 0px 6%;
+      background-repeat: no-repeat;
+      background-position: left 100%;
+      transition: all 0.5s ease;
+    }
+  }
+
+  .slide-title2 {
+    a {
+      color: rgb(0, 0, 0);
+      background: linear-gradient(to right, currentColor 0%, currentColor 100%);
+      background-size: 0px 8%;
+      background-repeat: no-repeat;
+      background-position: left 100%;
+      transition: all 0.5s ease;
+      &:hover {
+        color: rgb(0, 0, 0);
+        background-size: 100% 8%;
+      }
+    }
+  }
+  .left-side {
+    display: grid;
+    height: 560px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    z-index: 3;
+    transition: all 1ms ease 2s;
+    &:hover {
+      .background-image {
+        transform: scale(1.1);
+      }
+      .slide-title {
+        a {
+          color: #fff;
+          background-size: 100% 6%;
+        }
+      }
+    }
+    .background-image {
+      height: 100%;
+      background-position: center left;
+      background-size: cover;
+      transition: all 0.5s ease;
+    }
+    .left-column {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      align-items: start;
+      justify-content: flex-end;
+      padding: 50px;
+    }
+    .background-image {
+      position: relative;
+      background-image: url("https://blogzine.webestica.com/assets/images/blog/16by9/05.jpg");
+      background-position: center left;
+      background-size: cover;
+    }
+    .left-footer {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: start;
+      a {
+        color: #fff;
+        background: linear-gradient(
+          to right,
+          currentColor 0%,
+          currentColor 100%
+        );
+        background-size: 0px 6%;
+        background-repeat: no-repeat;
+        background-position: left 100%;
+        transition: all 0.5s ease;
+        &:hover {
+          color: #fff;
+          background-size: 100% 6%;
+        }
+      }
+      .footer-item {
+        color: #fff;
+        font-size: 15px;
+        font-weight: 400;
+        margin: 0;
+      }
+      .footer-item1 {
+        color: #fff;
+        font-size: 15px;
+        font-weight: 400;
+        margin: 0;
+      }
+      .footer-img {
+        width: 40px;
+        height: 40px !important;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 20px;
+      }
+      .footer-item::before {
+        content: "•";
+        color: inherit;
+        padding-left: 0.65rem;
+        padding-right: 0.75rem;
+        opacity: 0.8;
+      }
+    }
+  }
+  .right-side {
+    .right-column {
+      display: flex;
+      flex-direction: column;
+      gap: 26px;
+      .right-card {
+        display: flex;
+        margin-left: 20px;
+        align-items: start;
+        .card-img {
+          width: 138px;
+          height: 103px;
+          border-radius: 10px;
+        }
+        .card-info {
+          margin-left: 20px;
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          align-items: start;
+          h5 {
+            font-size: 19px;
+            font-weight: 500;
+          }
+          .badge {
+            padding: 4px 8px;
+            font-size: 12.75px;
+          }
+          .right-footer {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: start;
+            a {
+              color: rgb(89, 93, 105);
+              background: linear-gradient(
+                to right,
+                currentColor 0%,
+                currentColor 100%
+              );
+              background-size: 0px 6%;
+              background-repeat: no-repeat;
+              background-position: left 100%;
+              transition: all 0.5s ease;
+              &:hover {
+                color: rgb(89, 93, 105);
+                background-size: 100% 6%;
+              }
+            }
+            .footer-img {
+              width: 35px;
+              height: 35px;
+              border-radius: 50%;
+              object-fit: cover;
+              margin-right: 20px;
+            }
+            .footer-item2 {
+              color: rgb(89, 93, 105);
+              font-size: 15px;
+              font-weight: 400;
+              margin: 0;
+            }
+            .footer-item1 {
+              color: rgb(89, 93, 105);
+              font-size: 15px;
+              font-weight: 400;
+              margin: 0;
+            }
+            .footer-item2:before {
+              content: "•";
+              color: inherit;
+              padding-left: 0.65rem;
+              padding-right: 0.75rem;
+              opacity: 0.8;
+            }
+          }
+        }
+      }
+    }
+  }
+}

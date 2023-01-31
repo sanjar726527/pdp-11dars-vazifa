@@ -1,0 +1,671 @@
+.customDropdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  color: rgb(89, 93, 105);
+  .dashboard {
+    font-size: 16px;
+    font-weight: 600;
+    white-space: pre;
+    color: inherit;
+    &.active::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      position: absolute;
+      top: 15px;
+      left: -8px;
+      background: #2163e8;
+      border-radius: 50%;
+      display: block;
+    }
+  }
+}
+.lifeStyleDropdowns {
+  position: relative;
+  .slide-title {
+    font-weight: normal;
+    a {
+      color: rgb(0, 0, 0);
+      background: linear-gradient(to right, currentColor 0%, currentColor 100%);
+      background-size: 0px 6%;
+      background-repeat: no-repeat;
+      background-position: left 100%;
+      transition: all 0.5s ease;
+      &:hover {
+        color: rgb(0, 0, 0);
+        background-size: 100% 6%;
+      }
+    }
+  }
+  .footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    a {
+      color: rgb(89, 93, 105);
+      background: linear-gradient(to right, currentColor 0%, currentColor 100%);
+      background-size: 0px 6%;
+      background-repeat: no-repeat;
+      background-position: left 100%;
+      transition: all 0.5s ease;
+      &:hover {
+        color: rgb(89, 93, 105);
+        background-size: 100% 6%;
+      }
+    }
+    .footer-img {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 20px;
+    }
+    .footer-item2 {
+      color: rgb(89, 93, 105);
+      font-size: 15px;
+      font-weight: 400;
+      margin: 0;
+    }
+    .footer-item1 {
+      color: rgb(89, 93, 105);
+      font-size: 15px;
+      font-weight: 400;
+      margin: 0;
+    }
+    .footer-item2:before {
+      content: "•";
+      color: inherit;
+      padding-left: 0.65rem;
+      padding-right: 0.75rem;
+      opacity: 0.8;
+    }
+  }
+  &:hover > .lifeStyleCards {
+    opacity: 1;
+    visibility: visible;
+  }
+  .button:hover {
+    .span {
+      color: #2163e8;
+    }
+  }
+  .span {
+    font-size: 16px;
+    font-weight: 600;
+    white-space: pre;
+  }
+  .lifeStyleCards {
+    margin-top: 26px;
+    position: absolute;
+    top: 100%;
+    left: -920%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease 0s;
+    border-radius: 5px;
+    padding: 10px;
+    background: #fff;
+    box-shadow: 1px 1px 7px rgb(85, 85, 85);
+    .card-item {
+      display: flex;
+      width: 270px;
+      flex-direction: column;
+      align-items: start;
+      justify-content: center;
+      padding: 10px;
+      gap: 10px;
+      img {
+        max-width: 250px;
+        height: 140px;
+        border-radius: 10px;
+      }
+      .card {
+        padding: 13px 40px;
+        a {
+          color: rgb(0, 0, 0);
+        }
+      }
+      .card-title {
+        font-size: 15px;
+        line-height: 1.25;
+        font-weight: 500;
+        max-width: 200px;
+      }
+      ul {
+        li {
+          color: rgb(89, 93, 105);
+        }
+      }
+    }
+    .card-item:hover {
+      background: rgb(191, 203, 241, 0.3);
+    }
+  }
+  button {
+    font-size: 16px;
+    text-align: left;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    font-weight: 500;
+    * {
+      color: rgb(89, 93, 105);
+    }
+  }
+  button:hover {
+    color: rgb(89, 93, 105);
+    border: 0;
+    padding: 0;
+    margin: 0;
+  }
+  .span::after {
+    content: "";
+    font-family: "Font Awesome 5 Free";
+    font-size: 0.5rem;
+    margin-left: 0.35rem;
+    font-weight: 900;
+    vertical-align: middle;
+    border: none;
+  }
+}
+.homeDropdown {
+  position: relative;
+  padding-bottom: 50px;
+  margin-bottom: -50px;
+  &:hover > .dropDownCards {
+    opacity: 1;
+    visibility: visible;
+  }
+  .dropDownCards {
+    color: rgb(89, 93, 105);
+    position: absolute;
+    z-index: 10;
+    top: 50px;
+    left: -10px;
+    width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+    border-radius: 5px;
+    padding: 10px;
+    background: #fff;
+    box-shadow: 1px 1px 7px rgb(85, 85, 85);
+    .container-fluid {
+      display: flex;
+      flex-direction: column;
+      .card-item {
+        font-size: 15px;
+        padding: 8px 4px;
+        color: inherit;
+        position: relative;
+        &:hover {
+          color: #2163e8;
+          cursor: pointer;
+          &::before {
+            content: "";
+            width: 7px;
+            height: 7px;
+            position: absolute;
+            top: 15px;
+            left: -8px;
+            background: #2163e8;
+            border-radius: 50%;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  .button {
+    border: 0;
+    position: relative;
+    font-size: 16px;
+    background: transparent;
+    font-weight: 600;
+    color: rgb(89, 93, 105);
+  }
+  .button:hover {
+    .span {
+      color: #2163e8;
+    }
+  }
+  .span::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    position: absolute;
+    top: 8px;
+    left: -5px;
+    background: #2163e8;
+    border-radius: 50%;
+    display: block;
+  }
+  .span::after {
+    content: "";
+    font-family: "Font Awesome 5 Free";
+    font-size: 0.5rem;
+    margin-left: 0.35rem;
+    font-weight: 900;
+    vertical-align: middle;
+    border: none;
+  }
+}
+
+.constDropdown {
+  position: relative;
+  padding-bottom: 50px;
+  margin-bottom: -50px;
+  &:hover > .dropDownCards {
+    opacity: 1;
+    visibility: visible;
+  }
+  .dropDownCards {
+    color: rgb(89, 93, 105);
+    position: absolute;
+    z-index: 10;
+    top: 50px;
+    width: 200px;
+    left: -10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+    border-radius: 5px;
+    padding: 10px;
+    padding-right: 0;
+    background: #fff;
+    box-shadow: 1px 1px 7px rgb(85, 85, 85);
+    .container-fluid {
+      display: flex;
+      flex-direction: column;
+      .card-item {
+        font-size: 15px;
+        padding: 8px 4px;
+        color: inherit;
+        position: relative;
+        &:hover {
+          color: #2163e8;
+          cursor: pointer;
+          &::before {
+            content: "";
+            width: 7px;
+            height: 7px;
+            position: absolute;
+            top: 15px;
+            left: -8px;
+            background: #2163e8;
+            border-radius: 50%;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  .dropDown2 {
+    position: relative;
+    &:hover > .dropDownCards1 {
+      opacity: 1;
+      visibility: visible;
+    }
+    .dropDownCards1 {
+      color: rgb(89, 93, 105);
+      position: absolute;
+      z-index: 10;
+      top: 10px;
+      left: 179px;
+      width: 220px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.5s ease;
+      border-radius: 5px;
+      padding: 10px;
+      background: #fff;
+      box-shadow: 1px 1px 7px rgb(85, 85, 85);
+      .container-fluid {
+        display: flex;
+        flex-direction: column;
+        .card-item {
+          font-size: 15px;
+          padding: 8px 4px;
+          color: inherit;
+          position: relative;
+          &:hover {
+            color: #2163e8;
+            cursor: pointer;
+            &::before {
+              content: "";
+              width: 7px;
+              height: 7px;
+              position: absolute;
+              top: 15px;
+              left: -8px;
+              background: #2163e8;
+              border-radius: 50%;
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+  .dropDown3 {
+    position: relative;
+    &:hover > .dropDownCards2 {
+      opacity: 1;
+      visibility: visible;
+    }
+    .dropDownCards2 {
+      color: rgb(89, 93, 105);
+      position: absolute;
+      z-index: 10;
+      top: 10px;
+      left: 198px;
+      width: 220px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.5s ease;
+      border-radius: 5px;
+      padding: 10px;
+      background: #fff;
+      box-shadow: 1px 1px 7px rgb(85, 85, 85);
+      .container-fluid {
+        display: flex;
+        flex-direction: column;
+        .card-item {
+          font-size: 15px;
+          padding: 8px 4px;
+          color: inherit;
+          position: relative;
+          &:hover {
+            color: #2163e8;
+            cursor: pointer;
+            &::before {
+              content: "";
+              width: 7px;
+              height: 7px;
+              position: absolute;
+              top: 15px;
+              left: -8px;
+              background: #2163e8;
+              border-radius: 50%;
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+  .dropDown4 {
+    position: relative;
+    &:hover > .dropDownCards3 {
+      opacity: 1;
+      visibility: visible;
+    }
+    .dropDownCards3 {
+      color: rgb(89, 93, 105);
+      position: absolute;
+      z-index: 10;
+      top: 10px;
+      left: -243px;
+      width: 220px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.5s ease;
+      border-radius: 5px;
+      padding: 10px;
+      background: #fff;
+      box-shadow: 1px 1px 7px rgb(85, 85, 85);
+      .container-fluid {
+        display: flex;
+        flex-direction: column;
+        .card-item {
+          font-size: 15px;
+          padding: 8px 4px;
+          color: inherit;
+          position: relative;
+          &:hover {
+            color: #2163e8;
+            cursor: pointer;
+            &::before {
+              content: "";
+              width: 7px;
+              height: 7px;
+              position: absolute;
+              top: 15px;
+              left: -8px;
+              background: #2163e8;
+              border-radius: 50%;
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .button {
+    border: 0;
+    position: relative;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(89, 93, 105);
+    background: transparent;
+    display: flex;
+  }
+
+  .button:hover {
+    .span {
+      color: #2163e8;
+    }
+    .span1 {
+      color: #2163e8;
+    }
+    .span2 {
+      color: #2163e8;
+    }
+    .span3 {
+      color: #2163e8;
+    }
+    .span4 {
+      color: #2163e8;
+    }
+  }
+  .span &.active::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    position: absolute;
+    top: 8px;
+    left: -5px;
+    background: #2163e8;
+    border-radius: 50%;
+    display: block;
+  }
+  .span::after {
+    content: "";
+    font-family: "Font Awesome 5 Free";
+    font-size: 0.5rem;
+    margin-left: 0.35rem;
+    font-weight: 900;
+    vertical-align: middle;
+    border: none;
+  }
+
+  .span1,
+  .span2,
+  .span3,
+  .span4 {
+    font-size: 15px;
+    font-weight: 500;
+    white-space: pre;
+  }
+
+  .span1::after {
+    content: "\f00d";
+    font-family: "Font Awesome 5 Free";
+    font-size: 0.7rem;
+    margin-left: 4rem;
+    font-weight: 900;
+    border: none;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  .span2::after {
+    content: "\f00d";
+    font-family: "Font Awesome 5 Free";
+    font-size: 0.7rem;
+    font-weight: 900;
+
+    border: none;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  .span3::after {
+    content: "\f00d";
+    font-family: "Font Awesome 5 Free";
+    font-size: 0.7rem;
+    margin-left: 2rem;
+    font-weight: 900;
+    border: none;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  .span4::after {
+    content: "\f00d";
+    font-family: "Font Awesome 5 Free";
+    font-size: 0.7rem;
+    margin-left: 3.5rem;
+    font-weight: 900;
+    border: none;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}
+
+.three-dots {
+  #dropdown-basic {
+    border: 0;
+    .dropdown-toggle::after {
+      display: none !important;
+    }
+  }
+
+  .dropdown-menu {
+    border: 0;
+    margin-left: -200px;
+    box-shadow: 1px 1px 7px rgb(85, 85, 85);
+    background: white;
+  }
+  .dropdown-toggle::after {
+    display: none;
+  }
+  .navItem {
+    display: flex;
+    width: 240px;
+
+    justify-content: end;
+    padding: 4px 30px 8px 8px;
+  }
+  .navItem:hover {
+    color: #2163e8;
+    background: transparent;
+  }
+}
+.searchDropdown {
+  position: relative;
+  bottom: 5px;
+  .button {
+    font-size: 16px;
+    text-align: left;
+    margin: 0;
+    border: 0;
+    background: transparent;
+    padding: 0;
+    font-weight: 500;
+    color: rgb(89, 93, 105);
+  }
+  .button:hover {
+    color: rgb(89, 93, 105);
+    border: 0;
+    padding: 0;
+    margin: 0;
+  }
+  .form-control {
+    background: rgb(255, 255, 255) !important;
+  }
+  .searchCard {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: 250px;
+    border: 0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 7px rgb(85, 85, 85);
+    background: #fff;
+    &.enable {
+      opacity: 1;
+    }
+    &.disable {
+      opacity: 0;
+    }
+  }
+}
+.grey-icons {
+  fill: rgb(89, 93, 105);
+}
+.grey-icons:hover {
+  fill: rgb(89, 93, 105) !important;
+}
+.dark {
+  .dropDownCards {
+    background: black !important;
+  }
+  .constDropdown {
+    .dropDownCards1 {
+      background: black !important;
+    }
+
+    .dropDownCards2 {
+      background: black !important;
+    }
+    .dropDownCards3 {
+      background: black !important;
+    }
+  }
+  .lifeStyleCards {
+    background: black;
+    * {
+      color: #fff !important;
+    }
+  }
+  .three-dots {
+    .dropdown-menu {
+      background: black !important;
+    }
+  }
+  .searchDropdown {
+    .searchCard {
+      background: black !important;
+    }
+    .form-control {
+      background: black !important;
+    }
+  }
+}

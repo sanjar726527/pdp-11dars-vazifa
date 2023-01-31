@@ -1,0 +1,42 @@
+.customNavbar {
+  position: relative;
+  z-index: 10;
+  .navbar-logo {
+    position: relative;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    .dark-image {
+      opacity: 1;
+    }
+    .light-image {
+      position: absolute;
+      opacity: 0;
+    }
+  }
+  &.dark {
+    .dark-image {
+      opacity: 0;
+    }
+    .light-image {
+      opacity: 1;
+    }
+  }
+}
+
+.grey-icons {
+  fill: rgb(89, 93, 105);
+}
+.grey-icons:hover {
+  fill: black;
+}
+.link:before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  background: #2163e8;
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 0.2rem;
+  margin-bottom: 1px;
+}

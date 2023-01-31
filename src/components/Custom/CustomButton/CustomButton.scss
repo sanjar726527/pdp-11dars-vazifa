@@ -1,0 +1,41 @@
+.btn {
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+  outline: 0;
+  white-space: nowrap;
+  margin-bottom: 6px;
+  padding: 6px 12px;
+  font-weight: 500;
+  font-size: 13px;
+
+  &.lower {
+    padding: 4px 8px;
+    font-weight: 400;
+    font-size: 12.75px;
+    line-height: 12.75px;
+    .dot::before {
+      content: "";
+      height: 10px;
+      width: 10px;
+      background-color: rgb(255, 255, 255);
+      border-radius: 50%;
+      display: inline-block;
+    }
+  }
+
+  &.black {
+    padding: 4px 8px;
+    font-weight: 400;
+    font-size: 12.75px;
+    line-height: 12.75px;
+    .dot::before {
+      content: "";
+      height: 10px;
+      width: 10px;
+      background-color: rgb(0, 0, 0);
+      border-radius: 50%;
+      display: inline-block;
+    }
+  }
+}
